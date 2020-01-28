@@ -1,0 +1,15 @@
+## Linear Search algorithm
+arr = [1,2,33,33]
+arr.append(30)
+print(arr)
+#found = 0
+for i in range(len(arr)):
+    if arr[i] == 100:
+        print('found in the position',i)
+        found = 1 
+        break
+
+notfound = True   # Important Part of Code.....
+
+if notfound:
+    print('not found')
