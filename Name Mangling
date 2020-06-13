@@ -3,20 +3,46 @@
 class Book:
   def __init__(self,title):
       self.title = title
+    
     # Adding more properties for the Book class
       self.author = author
       self.pages = pages
       self.price = price
-    # Create Instance Methods 
+      self.__privacy = "this is privacy attribute"
     
+    # Create Instance Methods  
+    # hasattr()  # hasattr method/function is used to check whether a attribute present in the class
+   
+   def getPrice(self):
+      if hasattr(self, "_discount"):
+          retunr self.prie - (self.price * self._discount)
+      else:
+          return self.price
+      
+       
+    def setDiscount(self, amount):
+      self._discount = amount    ### single underscore( _) its intended to use internal to the class
+    # Create Instance Methods
+    
+    # If double underscore (_ _) is used before the attribute, python interpreter will change the name of it and throws error when other class
+   # try to access it.
     
     
  # instance of a class
- b1 = Book("Alchemist")
- b2 = Book("Rich Dad Poor Dad")
+ b1 = Book("Alchemist","Paulo Coelho",240,34.09)
+ b2 = Book("Rich Dad Poor Dad","Robert K",270,35.90)
  
  
  #print
  print(b1)
  print(b1.title)
  
+# Access discount method
+print(b2.getPrice())   # price of the book before discount
+b2.setDiscount(0.10)
+print(b2.getPrice())   # price of the book after discount
+
+# Accessing privacy attribute
+print(b2.__privacy)  # this throws error
+
+print(b2._Book__privacy) # this works perfectly
