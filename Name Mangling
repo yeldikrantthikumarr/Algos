@@ -1,0 +1,22 @@
+# Understanding Name Mangling in Python
+# base class
+class Book:
+  def __init__(self,title):
+      self.title = title
+    # Adding more properties for the Book class
+      self.author = author
+      self.pages = pages
+      self.price = price
+    # Create Instance Methods 
+    
+    
+    
+ # instance of a class
+ b1 = Book("Alchemist")
+ b2 = Book("Rich Dad Poor Dad")
+ 
+ 
+ #print
+ print(b1)
+ print(b1.title)
+ 
